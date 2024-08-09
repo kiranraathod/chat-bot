@@ -1,0 +1,39 @@
+Approaches to building Niche Chatbot with RAG Functionality:
+
+1. Combination (
+RAG engine: LangChain or LlamaIndex as the core
+FastAPI Web Framework Front end: chatbot interface.
+Hugging Face's models or OpenAI's API for the language model component.
+)
+
+2.Rasa: 
+Rasa primarily focuses on natural language understanding (NLU) and dialogue management. So this means, it doesn't natively include RAG as a feature.
+
+If we want to Implement RAG with Rasa:
+Typically involve custom action implementations in Rasa. This is the "actions.py" rule. 
+
+RAG Integration:
+Use Rasa for conversation flow and NLU, then implement RAG in custom actions.
+This involve using libraries like LangChain, Haystack, or custom implementations with vector databases.
+
+- Using LangChain or LlamaIndex as the core RAG engine.
+- Combining it with a web framework like FastAPI for the chatbot interface.
+- Utilize Hugging Face's models or something like OpenAI's API for the language model component.
+
+
+3. LlamaIndex aka GPT Index:
+
+  This tool was specifically designed for RAG applications. It cn be used to build chatbots with RAG capabilities:
+- Highly flexible and can be integrated with various LLMs
+- Requires more custom development for full chatbot functionality
+
+
+4. Haystack:
+
+  This is an Open-source framework (Kiran has looked into it as well) for building search and question-answering systems. This includes RAG capabilities and what we were looking at initially. So it can be used to build chatbots, though it's not its primary focus. It does offer flexibility and can be integrated with other tools
+
+5. Botpress:
+
+  Easier deving: Open-source with a visual flow builder. Also supports multiple languages and channels, cloud and self-hosted options. Also has a good balance between ease of use and customization and a growing community and marketplace for plugins, but this is paid as well (enterprise plan).
+
+
